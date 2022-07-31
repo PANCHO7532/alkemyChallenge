@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "ecc29f7d-ccdb-4250-9492-c271530bf37c",
+		"name": "Disney API",
+		"description": "# Introduction\nRetrieve information from Disney characters in a simple way for integration in Web/Desktop development\n\n# Overview\nRemember that in order for use the API, you need to perform an login first, then use the provided token as an \"Authorization: Bearer\" in your requests.\n\n# Authentication\nAfter getting the token via /auth/login you can start making requests through the API, refer to the documentation for more details (note: Tokens for each session lasts 1 hour!)\n\n# Error Codes\nAll requests are performed and returns an 200 error code. An error object would be supplied on the response data if an internal error happens on our side.\n\n# Rate limit\nNo rate limits, happy coding!",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5424814"
+	},
+	"item": [
+		{
+			"name": "/characters",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "/characters",
+				"description": "Get character information stored on the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/characters",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"John\", \"age\": 22, \"weight\": 90, \"biography\": \"This is a biography, the life story of \na character!\", \"imageURL\": \"http://example.com/image.png\"}"
+				},
+				"url": "/characters",
+				"description": "Add character information to be stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/characters",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"John\", \"age\": 22, \"weight\": 90, \"biography\": \"This is a biography, the life story of \na character!\", \"imageURL\": \"http://example.com/image.png\"}"
+				},
+				"url": "/characters",
+				"description": "Modify character information stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/characters",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "/characters",
+				"description": "Delete a character stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/movies",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "/movies",
+				"description": "Get movie information stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"MovieName\", \"imageURL\", \"http://example.com/moviePoster.png\", \"creationDate\": \"2000-06-22 00:00:01\", rate: 5}"
+				},
+				"url": "/movies",
+				"description": "Add a new movie to be stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/movies",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"title\": \"MovieName\", \"imageURL\", \"http://example.com/moviePoster.png\", \"creationDate\": \"2000-06-22 00:00:01\", rate: 5}"
+				},
+				"url": "/movies",
+				"description": "Modify an pre-existent movie information stored at the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/movies",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "/movies",
+				"description": "Delete a movie from the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userName\": \"user\", \"password\": \"pass\"}"
+				},
+				"url": "/auth/login",
+				"description": "Login and retrieve the token for the API"
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/register",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userName\": \"user\", \"email\": \"email@example.com\", \"password\": \"pass\"}"
+				},
+				"url": "/auth/register",
+				"description": "Register a new account into the API"
+			},
+			"response": []
+		}
+	]
+}
